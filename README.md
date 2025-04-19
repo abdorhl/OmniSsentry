@@ -21,7 +21,7 @@ OmniSentry is a comprehensive OSINT (Open Source Intelligence) command-line tool
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/omnissentry.git
+git clone https://github.com/abdorhl/OmniSsentry.git
 cd omnissentry
 
 # Install the package
