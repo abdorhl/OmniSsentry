@@ -1,0 +1,71 @@
+Metadata-Version: 2.4
+Name: omnissentry
+Version: 0.1.0
+Summary: Comprehensive OSINT Tool
+Author: OmniSentry Team
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Dynamic: requires-python
+
+# OmniSentry OSINT Tool
+
+A comprehensive OSINT (Open Source Intelligence) tool for gathering information about emails, domains, social media accounts, and phone numbers.
+
+## Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/omnissentry.git
+cd omnissentry
+
+# Install the package
+pip install -e .
+```
+
+## Configuration
+
+Create a `.env` file in the root directory with your API keys:
+
+```
+HUNTER_API_KEY=your_hunter_api_key_here
+HAVEI_BEEN_PWNED_API=your_haveibeenpwned_api_key_here
+VIRUSTOTAL_API=your_virustotal_api_key_here
+NUMVERIFY_API=your_numverify_api_key_here
+```
+
+## Usage
+
+The tool can be used via the command line:
+
+```bash
+# Email investigation
+omnissentry email user@example.com
+
+# Social media search
+omnissentry social username
+
+# Domain information
+omnissentry domain example.com
+omnissentry domain example.com --subdomains --dns
+
+# Phone number analysis
+omnissentry phone +123456789
+```
+
+## Output Formats
+
+You can use the `-f` or `--format` option to specify the output format:
+
+```bash
+omnissentry email user@example.com -f json
+omnissentry domain example.com -f table
+```
+
+## Running Tests
+
+```bash
+pytest
+```
